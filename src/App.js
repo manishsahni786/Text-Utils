@@ -4,7 +4,7 @@ import TextForm from './components/TextForm';
 import About from './components/About'; 
 import React, { useState } from 'react'
 import Alert from './components/Alert';
-import Home from './pages/Home'
+// import Home from './pages/Home'
 
 import {
   Route,
@@ -44,13 +44,14 @@ function App() {
   }
    return (
   <>
-    <Navbar title="TextUtils" aboutText="About" mode={mode} toogleMode={toogleMode} />
+    <Navbar title="TextUtils" aboutText="About"  mode={mode} toogleMode={toogleMode} />
     <Alert alert={alert}/>
     <div className="container my-3">
+    
       <Routes>
-          <Route  path="/home" element={<Home />} />
-          <Route  path="/home/about" element={<About />} />
-          <Route  path="/home/textutils" element={<TextForm heading="Enter the text to analize" mode={mode}/>} />
+          <Route  path="/" element={<TextForm heading="Enter the text to analize" mode={mode}/>} />
+          <Route  path="/about" element={<About />} />
+          <Route  path="/textutils" element={<TextForm heading="Enter the text to analize" mode={mode}/>} />
       </Routes>
     </div>
   </>
