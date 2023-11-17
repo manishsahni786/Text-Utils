@@ -116,14 +116,7 @@ const handleSentenceCaseClick = () => {
         }
     }
 }
-// Text to speech
-function textToSpeech(){
-    const Speech= new SpeechSynthesisUtterance();
-    const message= document.getElementById("myBox").value;
-    Speech.lang='eng';
-    Speech.text= message;
-    window.speechSynthesis.speak(Speech);
-}
+
 //Function for inverse text
  const inversed=(event) =>{
       let currentValue =text.split("").reverse("").join("");
@@ -159,7 +152,7 @@ return (
     <button className="btn btn-primary mx-1 my-3" onClick={handleCoClick}>Count no. of Consonants </button>
     <button className="btn btn-primary mx-1 my-1" onClick={handlecamelCaseonClick}>CamelCaseText</button>
     <button className="btn btn-primary mx-1 my-1" onClick={handleSentenceCaseClick}>Handle Sentence</button>
-    <button className="btn btn-primary mx-1 my-1" onClick={textToSpeech}>Text to Speech</button>
+    
     <button type="submit" onClick={speak} className="btn btn-warning mx-2 my-2" id="toggle">Speak</button>
     <div className="container my-3" style={{color: props.mode==='light'?'black':'white'}} >
       <h2>Your text summary</h2>
